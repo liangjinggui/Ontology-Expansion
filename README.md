@@ -2,38 +2,38 @@
 
 ## Taxonomy
 We summarize related research papers and resources for ontology expansion (OnExp). We categorize OnExp into New Intent Discovery (NID), New Slot-Value Discovery (NSVD),  and Joint OnExp, as illustrated in the following figure:
-<img src="./Ontology_Expansion_Taxonomy.png" with="10">
+<img src="./OnExp_Taxonomy.png" with="10">
 
 
 We  present a summary of the datasets widely used in OnExp tasks, as shown in the Table below.
-<img src="./Ontology_Expansion_Datasets.png" with="10">
+<img src="./OnExp_Datasets.png" with="10">
 
 
 ## Table of Contents
 - OnExp Methods
-  - [New Intent Discovery](#new-intent-discovery)
-    - [Unsupervised NID](#unsupervised-nid)
-      - [Rule-based Methods](#rule-based-methods)
-      - [Statistical Methods](#statistical-methods)
-      - [NN-based Methods](#nn-based-methods)
-    - [Semi-supervised NID](#semi-supervised-nid)
-      - [SLMs-based Methods](#slms-based-methods)
-      - [LLMs-based Methods](#llms-based-methods)
-      - [Hybrid Methods](#hybrid-methods)
-  - [New Slot-Value Discovery](#new-slot-value-discovery)
-    - [Unsupervised NSVD](#unsupervised-nsvd)
-      - [NVD-based Methods](#nvd-based-methods)
-      - [NSD-based Methods](#nsd-based-methods)
-    - [Semi-supervised NSVD](#semi-supervised-nsvd)
-      - [NVD-based Methods](#nvd-based-methods)
-      - [NSD-based Methods](#nvd-based-methods)
-  - [Joint Ontology Expansion](#joint-ontology-expansion)
+   - [New Intent Discovery](#new-intent-discovery)
+      - [Unsupervised NID](#unsupervised-nid)
+         - [Rule-based Methods](#rule-based-methods)
+         - [Statistical Methods](#statistical-methods)
+         - [NN-based Methods](#nn-based-methods)
+      - [Zero-shot NID](#zero-shot-nid)
+         - [RNN-based Methods](#rnn-based-methods)
+         - [Transformer-based Methods](#transformer-based-methods)
+      - [Semi-supervised NID](#semi-supervised-nid)
+         - [SLMs-based Methods](#slms-based-methods)
+         - [LLMs-based Methods](#llms-based-methods)
+         - [Hybrid Methods](#hybrid-methods)
+   - [New Slot-Value Discovery](#new-slot-value-discovery)
+      - [Unsupervised NSVD](#unsupervised-nsvd)
+      - [Partially Supervised NSVD](#partially-supervised-nsvd)
+         - [No New Slots](#no-new-slots)
+         - [New Slot Type Known](#new-slot-type-known)
+         - [New Slot Description Known](#new-slot-description-known)
+         - [New Slot Unknown](#new-slot-unknown)
+   - [Joint Ontology Expansion](#joint-ontology-expansion)
       - [SLMs-based Methods](#slms-based-ethods)
     
-<!-- - Benchmark Datasets
-  - [Knowledge Base-based Datasets](#knowledge-base-based-datasets)
-  - [Text-based Datasets](#text-based-datasets)
-  - [Visual-based Datasets](#visual-based-datasets) -->
+- [Benchmark Datasets](#benchmark-datasets)
   
 ## New Intent Discovery
 ### Unsupervised NID
@@ -108,6 +108,55 @@ Proceedings of the fifth Berkeley symposium on mathematical statistics and proba
    *Maarten De Raedt, Fréderic Godin, Thomas Demeester, Chris Develder.*
    NLP4ConvAI, 2023.
    [[Paper]](https://aclanthology.org/2023.nlp4convai-1.7.pdf) 
+
+
+
+### Zero-shot NID
+
+#### RNN-based Methods
+1. **Zero-shot user intent detection via capsule neural networks.** 
+   *Congying Xia, Chenwei Zhang, Xiaohui Yan, Yi Chang, Philip S. Yu.*
+   EMNLP, 2018.
+   [[Paper]](https://arxiv.org/pdf/1809.00385) 
+2. **Reconstructing capsule networks for zero-shot intent classification.** 
+   *Han Liu, Xiaotong Zhang, Lu Fan, Xuandi Fu, Qimai Li, Xiao-Ming Wu.*
+   EMNLP/IJCNLP, 2019.
+   [[Paper]](https://aclanthology.org/D19-1486.pdf) 
+3. **Unknown intent detection using Gaussian mixture model with an application to zero-shot intent classification.** 
+   *Guangfeng Yan, Lu Fan, Qimai Li, Han Liu, Xiaotong Zhang, Xiao-Ming Wu, Albert Y. S. Lam.*
+   ACL, 2020.
+   [[Paper]](https://aclanthology.org/2020.acl-main.99.pdf) 
+4. **Generalized zero-shot intent detection via commonsense knowledge.** 
+   *A. B. Siddique, Fuad T. Jamour, Luxun Xu, Vagelis Hristidis.*
+   SIGIR, 2021.
+   [[Paper]](https://dl.acm.org/doi/pdf/10.1145/3404835.3462985) 
+5. **Learning class-transductive intent representations for zero-shot intent detection.** 
+   *Qingyi Si, Yuanxin Liu, Peng Fu, Zheng Lin, Jiangnan Li, Weiping Wang.*
+   IJCAI, 2021.
+   [[Paper]](https://arxiv.org/pdf/2012.01721) 
+
+
+#### Transformer-based Methods
+1. **A Label-Aware BERT Attention Network for Zero-Shot Multi-Intent Detection in Spoken Language Understanding.** 
+   *Ting-Wei Wu, Ruolin Su, Biing-Hwang Juang.*
+   EMNLP, 2021.
+   [[Paper]](https://aclanthology.org/2021.emnlp-main.399.pdf) 
+2. **Template-based Approach to Zero-shot Intent Recognition.** 
+   *Dmitry Lamanov, Pavel Burnyshev, Ekaterina Artemova, Valentin Malykh, Andrey Bout, Irina Piontkovskaya.*
+   INLG, 2022.
+   [[Paper]](https://arxiv.org/pdf/2206.10914) 
+3. **A simple meta-learning paradigm for zero-shot intent classification with mixture attention mechanism.** 
+   *Han Liu, Siyang Zhao, Xiaotong Zhang, Feng Zhang, Junjie Sun, Hong Yu, Xianchao Zhang.*
+   SIGIR, 2022.
+   [[Paper]](https://arxiv.org/pdf/2206.02179) 
+4. **Pre-training intent-aware encoders for zero-and few-shot intent classification.** 
+   *Mujeen Sung, James Gung, Elman Mansimov, Nikolaos Pappas, Raphael Shu, Salvatore Romeo, Yi Zhang, Vittorio Castelli.*
+   EMNLP, 2023.
+   [[Paper]](https://arxiv.org/pdf/2305.14827) 
+5. **Exploring zero and few-shot techniques for intent classification.** 
+   *Soham Parikh, Mitul Tiwari, Prashil Tumbade, Quaizar Vohra.*
+   ACL Industry, 2023.
+   [[Paper]](https://arxiv.org/pdf/2305.07157) 
 
 
 ### Semi-supervised NID
@@ -232,25 +281,6 @@ Proceedings of the fifth Berkeley symposium on mathematical statistics and proba
 
 ## New Slot-Value Discovery
 ### Unsupervised NSVD
-#### NVD-based Methods
-1. **Towards unsupervised spoken language understanding: Exploiting query click logs for slot filling.** 
-   *Gökhan Tür, Dilek Hakkani-Tür, Dustin Hillard, Asli Celikyilmaz.*
-   INTERSPEECH, 2011.
-   [[Paper]](https://www.microsoft.com/en-us/research/wp-content/uploads/2011/08/Gokhan-IS11.pdf) 
-2. **Unsupervised person slot filling based on graph mining.** 
-   *Dian Yu, Heng Ji.*
-   ACL, 2016.
-   [[Paper]](https://aclanthology.org/P16-1005.pdf) 
-3. **Unsupervised Slot Filler Refinement via Entity Community Construction.** 
-   *Zengzhuang Xu, Rui Song, Bowei Zou, Yu Hong.*
-   NLPCC, 2017.
-   [[Paper]](http://tcci.ccf.org.cn/conference/2017/papers/1077.pdf) 
-4. **A novel unsupervised approach for precise temporal slot filling from incomplete and noisy temporal contexts.** 
-   *Xueying Wang, Haiqiao Zhang, Qi Li, Yiyu Shi, Meng Jiang.*
-   WWW, 2019.
-   [[Paper]](https://par.nsf.gov/servlets/purl/10132904) 
-
-#### NSD-based Methods
 1. **Leveraging frame semantics and distributional semantics for unsupervised semantic slot induction in spoken dialogue systems.** 
    *Yun-Nung Chen, William Yang Wang, Alexander I. Rudnicky.*
    SLT, 2014.
@@ -272,83 +302,112 @@ Proceedings of the fifth Berkeley symposium on mathematical statistics and proba
    SIGDIAL, 2023.
    [[Paper]](https://arxiv.org/pdf/2308.04712) 
 
-### Semi-supervised NSVD
-#### NVD-based Methods
-1. **Combining Word-Level and Character-Level Representations for Relation Classification of Informal Text.** 
+
+### Partially Supervised NSVD
+#### No New Slots
+1. **Towards unsupervised spoken language understanding: Exploiting query click logs for slot filling.** 
+   *Gökhan Tür, Dilek Hakkani-Tür, Dustin Hillard, Asli Celikyilmaz.*
+   INTERSPEECH, 2011.
+   [[Paper]](https://www.microsoft.com/en-us/research/wp-content/uploads/2011/08/Gokhan-IS11.pdf) 
+2. **Unsupervised person slot filling based on graph mining.** 
+   *Dian Yu, Heng Ji.*
+   ACL, 2016.
+   [[Paper]](https://aclanthology.org/P16-1005.pdf) 
+3. **Unsupervised Slot Filler Refinement via Entity Community Construction.** 
+   *Zengzhuang Xu, Rui Song, Bowei Zou, Yu Hong.*
+   NLPCC, 2017.
+   [[Paper]](http://tcci.ccf.org.cn/conference/2017/papers/1077.pdf) 
+4. **Combining Word-Level and Character-Level Representations for Relation Classification of Informal Text.** 
    *Dongyun Liang, Weiran Xu, Yinge Zhao.*
    Rep4NLP@ACL, 2017.
    [[Paper]](https://aclanthology.org/W17-2606.pdf) 
-2. **Towards zero-shot frame semantic parsing for domain scaling.** 
-   *Ankur Bapna, Gökhan Tür, Dilek Hakkani-Tür, Larry P. Heck.*
-   INTERSPEECH, 2017.
-   [[Paper]](https://arxiv.org/pdf/1707.02363) 
-3. **Improving slot filling in spoken language understanding with joint pointer and attention.** 
+5. **A novel unsupervised approach for precise temporal slot filling from incomplete and noisy temporal contexts.** 
+   *Xueying Wang, Haiqiao Zhang, Qi Li, Yiyu Shi, Meng Jiang.*
+   WWW, 2019.
+   [[Paper]](https://par.nsf.gov/servlets/purl/10132904) 
+6. **Improving slot filling in spoken language understanding with joint pointer and attention.** 
    *Lin Zhao, Zhe Feng.*
    ACL, 2018.
    [[Paper]](https://aclanthology.org/P18-2068.pdf) 
-4. **Leveraging knowledge bases in lstms for improving machine reading.** 
-   *Bishan Yang, Tom M. Mitchell.*
-   ACL, 2017.
-   [[Paper]](https://arxiv.org/pdf/1902.09091) 
-5. **Learning to tag OOV tokens by integrating contextual representation and background knowledge.** 
-   *Keqing He, Yuanmeng Yan, Weiran Xu.*
-   ACL, 2020.
-   [[Paper]](https://aclanthology.org/2020.acl-main.58.pdf) 
-6. **Few-shot representation learning for out-of-vocabulary words.** 
+7. **Few-shot representation learning for out-of-vocabulary words.** 
    *Ziniu Hu, Ting Chen, Kai-Wei Chang, Yizhou Sun.*
    ACL, 2019.
    [[Paper]](https://arxiv.org/pdf/1907.00505) 
-7. **Robust zero-shot cross-domain slot filling with example values.** 
-   *Darsh J. Shah, Raghav Gupta, Amir A. Fayazi, Dilek Hakkani-Tür.*
-   ACL, 2019.
-   [[Paper]](https://arxiv.org/pdf/1906.06870) 
-8. **Span-ConveRT: Few-shot span extraction for dialog with pretrained conversational representations.** 
+8. **Learning to tag OOV tokens by integrating contextual representation and background knowledge.** 
+   *Keqing He, Yuanmeng Yan, Weiran Xu.*
+   ACL, 2020.
+   [[Paper]](https://aclanthology.org/2020.acl-main.58.pdf) 
+9. **Span-ConveRT: Few-shot span extraction for dialog with pretrained conversational representations.** 
    *Sam Coope, Tyler Farghly, Daniela Gerz, Ivan Vulic, Matthew Henderson.*
    ACL, 2020.
    [[Paper]](https://arxiv.org/pdf/2005.08866) 
-9. **Transfer learning for sequence labeling using source model and target data.** 
+
+#### New Slot Type Known
+1. **Transfer learning for sequence labeling using source model and target data.** 
    *Lingzhen Chen, Alessandro Moschitti.*
    AAAI, 2019.
    [[Paper]](https://scholar.google.com/scholar_url?url=https://ojs.aaai.org/index.php/AAAI/article/download/4586/4464&hl=zh-CN&sa=T&oi=gsr-r-gga&ct=res&cd=0&d=7656242682906742870&ei=hWpoZtrXA66p6rQPit2GkAE&scisig=AFWwaeZLBDQCH8Q5PE6YP-5j_S8R) 
-10. **Learning label-relational output structure for adaptive sequence labeling.** 
+2. **Learning label-relational output structure for adaptive sequence labeling.** 
    *Keqing He, Yuanmeng Yan, Hong Xu, Sihong Liu, Zijun Liu, Weiran Xu.*
    IJCNN, 2020.
    [[Paper]](http://vigir.missouri.edu/~gdesouza/Research/Conference_CDs/IEEE_WCCI_2020/IJCNN/Papers/N-20791.pdf) 
-11. **Coach: A coarse-to-fine approach for cross-domain slot filling.** 
-   *Zihan Liu, Genta Indra Winata, Peng Xu, Pascale Fung.*
+3. **Few-shot slot tagging with collapsed dependency transfer and label-enhanced task-adaptive projection network.** 
+   *Yutai Hou, Wanxiang Che, Yongkui Lai, Zhihan Zhou, Yijia Liu, Han Liu, Ting Liu.*
    ACL, 2020.
-   [[Paper]](https://arxiv.org/pdf/2004.11727) 
-12. **Contrastive zero-shot learning for cross-domain slot filling with adversarial attack.** 
-   *Keqing He, Jinchao Zhang, Yuanmeng Yan, Weiran Xu, Cheng Niu, Jie Zhou.*
-   COLING, 2020.
-   [[Paper]](https://aclanthology.org/2020.coling-main.126.pdf) 
-13. **Bridge to target domain by prototypical contrastive learning and label confusion: Re-explore zero-shot learning for slot filling.** 
-   *Liwen Wang, Xuefeng Li, Jiachi Liu, Keqing He, Yuanmeng Yan, Weiran Xu.*
-   EMNLP, 2021.
-   [[Paper]](https://arxiv.org/pdf/2110.03572) 
-14. **QA-driven zero-shot slot filling with weak supervision pretraining.** 
-   *Xinya Du, Luheng He, Qi Li, Dian Yu, Panupong Pasupat, Yuan Zhang.*
-   ACL/IJCNLP, 2021.
-   [[Paper]](https://aclanthology.org/2021.acl-short.83.pdf) 
-15. **Cross-domain slot filling as machine reading comprehension: A new perspective.** 
-   *Jian Liu, Mengshi Yu, Yufeng Chen, Jinan Xu.*
-   IEEE ACM Trans. Audio Speech Lang. Process, 2022.
-   [[Paper]](https://ieeexplore.ieee.org/document/9670742) 
-16. **Generative zero-shot prompt learning for cross-domain slot filling with inverse prompting.** 
-   *Xuefeng Li, Liwen Wang, Guanting Dong, Keqing He, Jinzheng Zhao, Hao Lei, Jiachi Liu, Weiran Xu.*
-   ACL Findings, 2023.
-   [[Paper]](https://arxiv.org/pdf/2307.02830) 
-17. **Zero-shot slot filling with slot-prefix prompting and attention relationship descriptor.** 
-   *Qiaoyang Luo, Lingqiao Liu.*
-   AAAI, 2023.
-   [[Paper]](https://scholar.google.com/scholar_url?url=https://ojs.aaai.org/index.php/AAAI/article/download/26566/26338&hl=zh-CN&sa=T&oi=gsr-r-gga&ct=res&cd=0&d=11710869742608609211&ei=12xoZq6AF7qY6rQP7_eJmAo&scisig=AFWwaeay1qDSkGOdfz7DOSqoOFRO) 
-18. **HierarchicalContrast: A Coarse-to-Fine Contrastive Learning Framework for Cross-Domain Zero-Shot Slot Filling.** 
+   [[Paper]](https://arxiv.org/pdf/2006.05702)
+4. **Few-shot learning for slot tagging with attentive relational network.** 
+   *Cennet Oguz, Ngoc Thang Vu.*
+   EACL, 2021.
+   [[Paper]](https://arxiv.org/pdf/2103.02333) 
+5. **HierarchicalContrast: A Coarse-to-Fine Contrastive Learning Framework for Cross-Domain Zero-Shot Slot Filling.** 
    *Junwen Zhang, Yin Zhang.*
    EMNLP Findings, 2023.
    [[Paper]](https://arxiv.org/pdf/2310.09135) 
+6. **Bridge to target domain by prototypical contrastive learning and label confusion: Re-explore zero-shot learning for slot filling.** 
+   *Liwen Wang, Xuefeng Li, Jiachi Liu, Keqing He, Yuanmeng Yan, Weiran Xu.*
+   EMNLP, 2021.
+   [[Paper]](https://arxiv.org/pdf/2110.03572)  
+7. **Generative zero-shot prompt learning for cross-domain slot filling with inverse prompting.** 
+   *Xuefeng Li, Liwen Wang, Guanting Dong, Keqing He, Jinzheng Zhao, Hao Lei, Jiachi Liu, Weiran Xu.*
+   ACL Findings, 2023.
+   [[Paper]](https://arxiv.org/pdf/2307.02830) 
+
+#### New Slot Description Known
+1. **Towards zero-shot frame semantic parsing for domain scaling.** 
+   *Ankur Bapna, Gökhan Tür, Dilek Hakkani-Tür, Larry P. Heck.*
+   INTERSPEECH, 2017.
+   [[Paper]](https://arxiv.org/pdf/1707.02363) 
+2. **Robust zero-shot cross-domain slot filling with example values.** 
+   *Darsh J. Shah, Raghav Gupta, Amir A. Fayazi, Dilek Hakkani-Tür.*
+   ACL, 2019.
+   [[Paper]](https://arxiv.org/pdf/1906.06870) 
+3. **Zero-shot adaptive transfer for conversational language understanding.** 
+   *Sungjin Lee, Rahul Jha.*
+   AAAI, 2019.
+   [[Paper]](https://scholar.google.com/scholar_url?url=https://aaai.org/ojs/index.php/AAAI/article/view/4634/4512&hl=zh-CN&sa=T&oi=gsr-r-gga&ct=res&cd=0&d=10809699564445506703&ei=L_hvZtyZGZWx6rQPkceYmAs&scisig=AFWwaeazRdw8uM96CWvJWf4oTocn) 
+4. **Coach: A coarse-to-fine approach for cross-domain slot filling.** 
+   *Zihan Liu, Genta Indra Winata, Peng Xu, Pascale Fung.*
+   ACL, 2020.
+   [[Paper]](https://arxiv.org/pdf/2004.11727)
+5. **Contrastive zero-shot learning for cross-domain slot filling with adversarial attack.** 
+   *Keqing He, Jinchao Zhang, Yuanmeng Yan, Weiran Xu, Cheng Niu, Jie Zhou.*
+   COLING, 2020.
+   [[Paper]](https://aclanthology.org/2020.coling-main.126.pdf) 
+6. **QA-driven zero-shot slot filling with weak supervision pretraining.** 
+   *Xinya Du, Luheng He, Qi Li, Dian Yu, Panupong Pasupat, Yuan Zhang.*
+   ACL/IJCNLP, 2021.
+   [[Paper]](https://aclanthology.org/2021.acl-short.83.pdf) 
+7. **Cross-domain slot filling as machine reading comprehension: A new perspective.** 
+   *Jian Liu, Mengshi Yu, Yufeng Chen, Jinan Xu.*
+   IEEE ACM Trans. Audio Speech Lang. Process, 2022.
+   [[Paper]](https://ieeexplore.ieee.org/document/9670742) 
+8. **Zero-shot slot filling with slot-prefix prompting and attention relationship descriptor.** 
+   *Qiaoyang Luo, Lingqiao Liu.*
+   AAAI, 2023.
+   [[Paper]](https://scholar.google.com/scholar_url?url=https://ojs.aaai.org/index.php/AAAI/article/download/26566/26338&hl=zh-CN&sa=T&oi=gsr-r-gga&ct=res&cd=0&d=11710869742608609211&ei=12xoZq6AF7qY6rQP7_eJmAo&scisig=AFWwaeay1qDSkGOdfz7DOSqoOFRO) 
 
 
-#### NSD-based Methods
+#### New Slot Unknown
 1. **Semi-supervised new slot discovery with incremental clustering.** 
    *Yuxia Wu, Lizi Liao, Xueming Qian, Tat-Seng Chua.*
    EMNLP Findings, 2022.
@@ -365,3 +424,76 @@ Proceedings of the fifth Berkeley symposium on mathematical statistics and proba
    *Zengfeng Zeng, Dan Ma, Haiqin Yang, Zhen Gou, Jianping Shen.*
    WWW, 2021.
    [[Paper]](https://arxiv.org/pdf/2103.08886) 
+
+
+## Benchmark Datasets
+
+#### 1. BANKING77
+**Efficient Intent Detection with Dual Sentence Encoders.** 
+*Iñigo Casanueva, Tadas Temcinas, Daniela Gerz, Matthew Henderson, Ivan Vulic.*
+NLP4ConvAI, 2020.
+[[Paper]](https://aclanthology.org/2020.nlp4convai-1.5.pdf) 
+[[Code]](https://github.com/PolyAI-LDN/task-specific-datasets)
+[[Data]](https://aclanthology.org/attachments/2020.nlp4convai-1.5.Dataset.zip)
+
+#### 2. CLINC150
+**An evaluation dataset for intent classification and out-of-scope prediction.** 
+*Stefan Larson, Anish Mahendran, Joseph J. Peper, Christopher Clarke, Andrew Lee, Parker Hill, Jonathan K. Kummerfeld, Kevin Leach, Michael A. Laurenzano, Lingjia Tang, Jason Mars.*
+EMNLP/IJCNLP, 2019.
+[[Paper]](https://aclanthology.org/D19-1131.pdf) 
+[[Code]](https://github.com/clinc/oos-eval)
+[[Data]](https://aclanthology.org/attachments/D19-1131.Attachment.zip)
+
+#### 3. StackOverflow
+**Short Text Clustering via Convolutional Neural Networks.** 
+*Jiaming Xu, Peng Wang, Guanhua Tian, Bo Xu, Jun Zhao, Fangyuan Wang, Hongwei Hao.*
+VS@HLT-NAACL, 2015.
+[[Paper]](https://aclanthology.org/W15-1509.pdf) 
+[[Code]](https://github.com/jacoxu/StackOverflow)
+[[Data]](https://github.com/jacoxu/StackOverflow/tree/master/rawText)
+
+#### 4. CamRest
+**A network-based end-to-end trainable task-oriented dialogue system.** 
+*Tsung-Hsien Wen, David Vandyke, Nikola Mrksic, Milica Gasic, Lina Maria Rojas-Barahona, Pei-Hao Su, Stefan Ultes, Steve J. Young.*
+EACL, 2017.
+[[Paper]](https://aclanthology.org/E17-1042.pdf) 
+[[Code]](https://github.com/shawnwun/NNDIAL?tab=readme-ov-file)
+[[Data]](https://www.repository.cam.ac.uk/items/011514c6-ee59-4a44-aa24-baab91001149)
+
+#### 5. Cambridge SLU
+**Discriminative spoken language understanding using word confusion networks.** 
+*Matthew Henderson, Milica Gasic, Blaise Thomson, Pirros Tsiakoulis, Kai Yu, Steve J. Young.*
+SLT, 2012.
+[[Paper]](http://mi.eng.cam.ac.uk/~sjy/papers/hgtt12.pdf) 
+[[Data]](https://aspace.repository.cam.ac.uk/handle/1810/248271)
+
+#### 6. WOZ-attr and WOZ-hotel
+**MultiWOZ 2.1: A Consolidated Multi-Domain Dialogue Dataset with State Corrections and State Tracking Baselines.** 
+*Mihail Eric, Rahul Goel, Shachi Paul, Abhishek Sethi, Sanchit Agarwal, Shuyang Gao, Adarsh Kumar, Anuj Goyal, Peter Ku, Dilek Hakkani-Tur.*
+LREC, 2020.
+[[Paper]](https://arxiv.org/pdf/1907.01669) 
+[[Code]](https://github.com/budzianowski/multiwoz/tree/master)
+[[Data]](https://github.com/budzianowski/multiwoz/tree/master/data)
+
+#### 7. ATIS
+**The ATIS spoken language systems pilot corpus.** 
+*Charles T. Hemphill, John J. Godfrey, George R. Doddington.*
+HLT, 1990.
+[[Paper]](https://aclanthology.org/H90-1021.pdf) 
+[[Data]](https://www.kaggle.com/code/siddhadev/atis-dataset-from-ms-cntk)
+
+#### 8. SNIPS
+**Snips voice platform: an embedded spoken language understanding system for private-by-design voice interfaces.** 
+*Alice Coucke, Alaa Saade, Adrien Ball, Théodore Bluche, Alexandre Caulier, David Leroy, Clément Doumouro, Thibault Gisselbrecht, Francesco Caltagirone, Thibaut Lavril, Maël Primet, Joseph Dureau.*
+2018.
+[[Paper]](https://arxiv.org/pdf/1805.10190) 
+[[Code]](https://github.com/snipsco/snips-nlu)
+[[Data]](https://github.com/MiuLab/SlotGated-SLU/tree/master/data/snips)
+
+#### 9. SGD
+**Towards Scalable Multi-Domain Conversational Agents: The Schema-Guided Dialogue Dataset.** 
+*Abhinav Rastogi, Xiaoxue Zang, Srinivas Sunkara, Raghav Gupta, Pranav Khaitan.*
+AAAI, 2019.
+[[Paper]](https://arxiv.org/pdf/1909.05855) 
+[[Code]](https://github.com/google-research-datasets/dstc8-schema-guided-dialogue)
+[[Data]](https://github.com/google-research-datasets/dstc8-schema-guided-dialogue)
